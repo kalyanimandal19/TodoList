@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #eaeef1 0%, #e2ebf0 100%);
+  color: #589fc5;
+  font-family: "Shippori Mincho B1", serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.8rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  font-size: 2rem;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+  outline: none;
+}
+form input {
+  width: 40%;
+}
+form button {
+  margin-left: 10px;
+  background: #589fc5;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease-in;
+}
+form button:hover {
+  background: white;
+  color: #589fc5;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  list-style-type: none;
+  width: 30%;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 1.5rem;
+  transition: all 2s;
+}
+.todo-item {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.checked-btn,
+.delete-btn {
+  background: #cc766b;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 5px;
+  border-radius: 8px;
+  margin-left: 5px;
+  outline: none;
+}
+.checked-btn {
+  background: #589fc5;
+}
+.fa-check-circle,
+.fa-trash {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  background: rgb(187, 233, 187);
+}
+.slide-out {
+  transform: translateX(80rem);
+  opacity: 0;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+select {
+  padding: 1rem;
+  color: #589fc5;
+  width: 15rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #589fc5;
+  color: white;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  /* border-bottom: 1px solid white; */
+  /* border-radius: 8px; */
+  transition: all 0.5s ease-in;
+}
+.select:hover::after {
+  background-color: white;
+  color: #589fc5;
+}
